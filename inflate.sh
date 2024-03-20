@@ -5,7 +5,8 @@
 
 echo "Unpacking GDB..."
 
-cd arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin/
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd $SCRIPT_DIR/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin/
 rm -f arm-none-eabi-gdb
 bunzip2 -k arm-none-eabi-gdb.bz2
 
